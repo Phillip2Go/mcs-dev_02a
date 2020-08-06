@@ -5,16 +5,13 @@
 \item 
 \mbox{\hyperlink{classserver_a30853862a28dda8c4c9b57b4e8f7de1a}{server}} ()
 \item 
-\mbox{\Hypertarget{classserver_a88b751e95b2efeda3ec3fd396ee8ff2d}\label{classserver_a88b751e95b2efeda3ec3fd396ee8ff2d}} 
-{\bfseries server} (const char $\ast$xml\+\_\+filename)
+\mbox{\hyperlink{classserver_a88b751e95b2efeda3ec3fd396ee8ff2d}{server}} (const char $\ast$xml\+\_\+filename)
 \item 
 void \mbox{\hyperlink{classserver_a05b87f8d29b1c1d48e85f13e843001d1}{parsexmldata}} ()
 \item 
-\mbox{\Hypertarget{classserver_aef5ed6e30123b6f2f752ff6ff5f4c00f}\label{classserver_aef5ed6e30123b6f2f752ff6ff5f4c00f}} 
-void {\bfseries initcameras} ()
+void \mbox{\hyperlink{classserver_aef5ed6e30123b6f2f752ff6ff5f4c00f}{initcameras}} ()
 \item 
-\mbox{\Hypertarget{classserver_a2b24c5cd7a618cb3d87fcff5d6e0b179}\label{classserver_a2b24c5cd7a618cb3d87fcff5d6e0b179}} 
-void {\bfseries startcameras} ()
+void \mbox{\hyperlink{classserver_a2b24c5cd7a618cb3d87fcff5d6e0b179}{startcameras}} ()
 \end{DoxyCompactItemize}
 
 
@@ -22,16 +19,58 @@ void {\bfseries startcameras} ()
 \mbox{\Hypertarget{classserver_a30853862a28dda8c4c9b57b4e8f7de1a}\label{classserver_a30853862a28dda8c4c9b57b4e8f7de1a}} 
 \index{server@{server}!server@{server}}
 \index{server@{server}!server@{server}}
-\doxysubsubsection{\texorpdfstring{server()}{server()}}
+\doxysubsubsection{\texorpdfstring{server()}{server()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily server\+::server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Server class.
 
 Server reads the X\+ML file at start and creates camera controller classes with the data in the X\+ML file. The server creates a camera controller object for each camera defined in the X\+ML file.
 
-Server is a Singleton. 
+Server is a Singleton. \mbox{\Hypertarget{classserver_a88b751e95b2efeda3ec3fd396ee8ff2d}\label{classserver_a88b751e95b2efeda3ec3fd396ee8ff2d}} 
+\index{server@{server}!server@{server}}
+\index{server@{server}!server@{server}}
+\doxysubsubsection{\texorpdfstring{server()}{server()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily server\+::server (\begin{DoxyParamCaption}\item[{const char $\ast$}]{xml\+\_\+filename }\end{DoxyParamCaption})}
+
+Server class starts with constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em load} & X\+ML file with Tiny\+X\+M\+L-\/2 A\+PI \\
+\hline
+{\em starts} & all cameras with \textquotesingle{}initcameras\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver_aef5ed6e30123b6f2f752ff6ff5f4c00f}\label{classserver_aef5ed6e30123b6f2f752ff6ff5f4c00f}} 
+\index{server@{server}!initcameras@{initcameras}}
+\index{initcameras@{initcameras}!server@{server}}
+\doxysubsubsection{\texorpdfstring{initcameras()}{initcameras()}}
+{\footnotesize\ttfamily void server\+::initcameras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Server initialize all defined cameras from X\+ML file parse to object in camera controller array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Initialize} & camera with gstreamer library. \\
+\hline
+{\em Initialize} & camera with Open\+CV commented out.\\
+\hline
+{\em \textquotesingle{}this\+Cameracontrollers\textquotesingle{}} & is an array that stores cameras defined in the X\+ML file \\
+\hline
+{\em initialize} & a threadable \textquotesingle{}controller\+Thread\textquotesingle{} object \\
+\hline
+{\em stores} & the threadable objects in a \textquotesingle{}initclientstreams\+Thread\textquotesingle{} array \\
+\hline
+{\em \textquotesingle{}getrootframe\+Thread\textquotesingle{}} & opens a Thread to get the root frames \\
+\hline
+{\em \textquotesingle{}sendrootframe\+Thread\textquotesingle{}} & opens a Thread to send root frames\\
+\hline
+{\em Start} & all cameras. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classserver_a05b87f8d29b1c1d48e85f13e843001d1}\label{classserver_a05b87f8d29b1c1d48e85f13e843001d1}} 
 \index{server@{server}!parsexmldata@{parsexmldata}}
 \index{parsexmldata@{parsexmldata}!server@{server}}
@@ -55,6 +94,29 @@ break if \textquotesingle{}camcounter\textquotesingle{} $>$ 9
 {\em camera} & has a \textquotesingle{}streamcounter\textquotesingle{} who is the \textquotesingle{}camcounter\textquotesingle{} in this function \\
 \hline
 {\em saves} & the cameras in a \textquotesingle{}cameras\textquotesingle{} array of the server class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver_a2b24c5cd7a618cb3d87fcff5d6e0b179}\label{classserver_a2b24c5cd7a618cb3d87fcff5d6e0b179}} 
+\index{server@{server}!startcameras@{startcameras}}
+\index{startcameras@{startcameras}!server@{server}}
+\doxysubsubsection{\texorpdfstring{startcameras()}{startcameras()}}
+{\footnotesize\ttfamily void server\+::startcameras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Server starts all defined cameras added to client stream thread array, with a join to a thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & camera with gstreamer library. \\
+\hline
+{\em Start} & camera with Open\+CV commented out.\\
+\hline
+{\em \textquotesingle{}initclientstreams\+Thread\textquotesingle{}} & join the defined Thread object to a Thread, to start the cameras \\
+\hline
+{\em start} & \textquotesingle{}getrootframe\+Thread\textquotesingle{} to get all the root frames over Open\+CV A\+PI \\
+\hline
+{\em send} & \textquotesingle{}sendrootframe\+Thread\textquotesingle{} to send all root frames over Open\+CV A\+PI\\
+\hline
+{\em Start/\+Join} & all cameras. \\
 \hline
 \end{DoxyParams}
 

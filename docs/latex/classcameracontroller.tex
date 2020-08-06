@@ -11,22 +11,17 @@ std\+::string \mbox{\hyperlink{classcameracontroller_af88661706716a916beb7568822
 \item 
 void \mbox{\hyperlink{classcameracontroller_a922bb00315f3fe188dc2d3ce47788edf}{getrootframe}} ()
 \item 
-\mbox{\Hypertarget{classcameracontroller_aa012304f62a970cf623018fd672cd89c}\label{classcameracontroller_aa012304f62a970cf623018fd672cd89c}} 
-void {\bfseries sendrootframe} ()
+void \mbox{\hyperlink{classcameracontroller_aa012304f62a970cf623018fd672cd89c}{sendrootframe}} ()
 \item 
-\mbox{\Hypertarget{classcameracontroller_abec2b9dbd105c4e362a39beb113d69e5}\label{classcameracontroller_abec2b9dbd105c4e362a39beb113d69e5}} 
-void {\bfseries initclientstreams} ()
+void \mbox{\hyperlink{classcameracontroller_abec2b9dbd105c4e362a39beb113d69e5}{initclientstreams}} ()
 \item 
-\mbox{\Hypertarget{classcameracontroller_ab34984cd7661072c17b0c665261a1a3f}\label{classcameracontroller_ab34984cd7661072c17b0c665261a1a3f}} 
-void {\bfseries startclientstreams} ()
+void \mbox{\hyperlink{classcameracontroller_ab34984cd7661072c17b0c665261a1a3f}{startclientstreams}} ()
 \item 
 void \mbox{\hyperlink{classcameracontroller_abd42ef82abbd969c13df5f1c022375ee}{getcontrollerlaunchstring}} ()
 \item 
-\mbox{\Hypertarget{classcameracontroller_a8b3f3ce689151c089687c5e6e77c053a}\label{classcameracontroller_a8b3f3ce689151c089687c5e6e77c053a}} 
-void {\bfseries createcontrollerserver} ()
+void \mbox{\hyperlink{classcameracontroller_a8b3f3ce689151c089687c5e6e77c053a}{createcontrollerserver}} ()
 \item 
-\mbox{\Hypertarget{classcameracontroller_afdfacb0fff4f268fffd47dfeb2b6ba70}\label{classcameracontroller_afdfacb0fff4f268fffd47dfeb2b6ba70}} 
-void {\bfseries createcontroller\+R\+T\+S\+Pserver} ()
+void \mbox{\hyperlink{classcameracontroller_afdfacb0fff4f268fffd47dfeb2b6ba70}{createcontroller\+R\+T\+S\+Pserver}} ()
 \end{DoxyCompactItemize}
 
 
@@ -57,6 +52,42 @@ Cameracontroller constructor.
 Create the server for the controller with \textquotesingle{}createcontrollerserver\textquotesingle{} before the clientserver starts. 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcameracontroller_afdfacb0fff4f268fffd47dfeb2b6ba70}\label{classcameracontroller_afdfacb0fff4f268fffd47dfeb2b6ba70}} 
+\index{cameracontroller@{cameracontroller}!createcontrollerRTSPserver@{createcontrollerRTSPserver}}
+\index{createcontrollerRTSPserver@{createcontrollerRTSPserver}!cameracontroller@{cameracontroller}}
+\doxysubsubsection{\texorpdfstring{createcontrollerRTSPserver()}{createcontrollerRTSPserver()}}
+{\footnotesize\ttfamily void cameracontroller\+::createcontroller\+R\+T\+S\+Pserver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cameracontroller creates the controller R\+T\+SP server with help of gstreamer library.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}controllerfactory\textquotesingle{}} & instantiates an new gstreamer rtsp media factory object \\
+\hline
+{\em \textquotesingle{}gst\+\_\+rtsp\+\_\+media\+\_\+factory\+\_\+set\+\_\+launch\textquotesingle{}} & launches the rtsp media factory \\
+\hline
+{\em \textquotesingle{}controllerfactory\textquotesingle{}} & is the mew instantiated object \\
+\hline
+{\em \textquotesingle{}controllersrc\textquotesingle{}} & is the launch string \\
+\hline
+{\em \textquotesingle{}gst\+\_\+rtsp\+\_\+media\+\_\+factory\+\_\+set\+\_\+shared\textquotesingle{}} & sets the options to multiple clients \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcameracontroller_a8b3f3ce689151c089687c5e6e77c053a}\label{classcameracontroller_a8b3f3ce689151c089687c5e6e77c053a}} 
+\index{cameracontroller@{cameracontroller}!createcontrollerserver@{createcontrollerserver}}
+\index{createcontrollerserver@{createcontrollerserver}!cameracontroller@{cameracontroller}}
+\doxysubsubsection{\texorpdfstring{createcontrollerserver()}{createcontrollerserver()}}
+{\footnotesize\ttfamily void cameracontroller\+::createcontrollerserver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cameracontroller creates the controller server with help of gstreamer library.
+
+
+\begin{DoxyParams}{Parameters}
+{\em call} & to get the launch string for the server \\
+\hline
+{\em create} & the R\+T\+SP server with help of gstreamer library \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classcameracontroller_abd42ef82abbd969c13df5f1c022375ee}\label{classcameracontroller_abd42ef82abbd969c13df5f1c022375ee}} 
 \index{cameracontroller@{cameracontroller}!getcontrollerlaunchstring@{getcontrollerlaunchstring}}
 \index{getcontrollerlaunchstring@{getcontrollerlaunchstring}!cameracontroller@{cameracontroller}}
@@ -107,7 +138,62 @@ Cameracontroller creates and retrieves the rootstream path.
 \begin{DoxyReturn}{Returns}
 U\+RL to communicate with camera
 \end{DoxyReturn}
-N\+DI not implemented yet. 
+N\+DI not implemented yet. \mbox{\Hypertarget{classcameracontroller_abec2b9dbd105c4e362a39beb113d69e5}\label{classcameracontroller_abec2b9dbd105c4e362a39beb113d69e5}} 
+\index{cameracontroller@{cameracontroller}!initclientstreams@{initclientstreams}}
+\index{initclientstreams@{initclientstreams}!cameracontroller@{cameracontroller}}
+\doxysubsubsection{\texorpdfstring{initclientstreams()}{initclientstreams()}}
+{\footnotesize\ttfamily void cameracontroller\+::initclientstreams (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cameracontroller initialices all streams to clients defined in X\+ML.
+
+Open\+CV functions commented out. Initialize all clientstreams defined in X\+ML. Add instanced thread object from client stream array to thread array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wait} & till all streams initialized, then set \textquotesingle{}initclientstreams\+Status\textquotesingle{} to \textquotesingle{}true\textquotesingle{} \\
+\hline
+{\em start} & all client streams with \textquotesingle{}startclientstreams\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcameracontroller_aa012304f62a970cf623018fd672cd89c}\label{classcameracontroller_aa012304f62a970cf623018fd672cd89c}} 
+\index{cameracontroller@{cameracontroller}!sendrootframe@{sendrootframe}}
+\index{sendrootframe@{sendrootframe}!cameracontroller@{cameracontroller}}
+\doxysubsubsection{\texorpdfstring{sendrootframe()}{sendrootframe()}}
+{\footnotesize\ttfamily void cameracontroller\+::sendrootframe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cameracontroller sends root frame from Open\+CV rtsp socket A\+PI.
+
+Open\+CV functions commented out. This function not in use right now.
+
+
+\begin{DoxyParams}{Parameters}
+{\em initialize} & all client streams and wait till all finished -\/$>$ threading problem \\
+\hline
+{\em check} & streaming protocol from url\\
+\hline
+{\em \textquotesingle{}rtsp\textquotesingle{}} & start send rootframe to client streams. -\/$>$ The \textquotesingle{}rootframe\textquotesingle{} only exist once (Singleton) \\
+\hline
+{\em \textquotesingle{}ndi\textquotesingle{}} & not implemented \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcameracontroller_ab34984cd7661072c17b0c665261a1a3f}\label{classcameracontroller_ab34984cd7661072c17b0c665261a1a3f}} 
+\index{cameracontroller@{cameracontroller}!startclientstreams@{startclientstreams}}
+\index{startclientstreams@{startclientstreams}!cameracontroller@{cameracontroller}}
+\doxysubsubsection{\texorpdfstring{startclientstreams()}{startclientstreams()}}
+{\footnotesize\ttfamily void cameracontroller\+::startclientstreams (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cameracontroller initialices all streams to clients defined in X\+ML.
+
+Open\+CV functions commented out. Initialize all clientstreams defined in X\+ML. Add instanced thread object from client stream array to thread array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wait} & till all streams initialized, then set \textquotesingle{}initclientstreams\+Status\textquotesingle{} to \textquotesingle{}true\textquotesingle{} \\
+\hline
+{\em start} & all client streams with \textquotesingle{}startclientstreams\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

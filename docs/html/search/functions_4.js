@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['server_32',['server',['../classserver.html#a30853862a28dda8c4c9b57b4e8f7de1a',1,'server']]],
-  ['startsendframes_33',['startsendframes',['../classclientstream.html#ad776397aa0146ce06d63861e9e537443',1,'clientstream']]]
+  ['rootstream_52',['rootstream',['../classrootstream.html#a655abf41f787329f272176a44fd51493',1,'rootstream::rootstream()'],['../classrootstream.html#a7cbb22e4f5c7b1fbc3e90567d20042b2',1,'rootstream::rootstream(std::string rootstreampath, std::string camip, GstRTSPMediaFactory *controllerfactory)']]]
 ];

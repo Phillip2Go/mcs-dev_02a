@@ -91,14 +91,14 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classcameracontroller.html#ae60183a8ea0e3aaadad7eb63260bd9c7">cameracontroller</a>(<a class="code" href="struct_camera.html">Camera</a> camera);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::string <a class="code" href="classcameracontroller.html#af88661706716a916beb7568822bbc1b2">getrootstreampath</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcameracontroller.html#a922bb00315f3fe188dc2d3ce47788edf">getrootframe</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> sendrootframe();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> initclientstreams();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> startclientstreams();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcameracontroller.html#aa012304f62a970cf623018fd672cd89c">sendrootframe</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcameracontroller.html#abec2b9dbd105c4e362a39beb113d69e5">initclientstreams</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcameracontroller.html#ab34984cd7661072c17b0c665261a1a3f">startclientstreams</a>();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// GStreamer functions</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcameracontroller.html#abd42ef82abbd969c13df5f1c022375ee">getcontrollerlaunchstring</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> createcontrollerserver();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> createcontrollerRTSPserver();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcameracontroller.html#a8b3f3ce689151c089687c5e6e77c053a">createcontrollerserver</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcameracontroller.html#afdfacb0fff4f268fffd47dfeb2b6ba70">createcontrollerRTSPserver</a>();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="struct_camera.html">Camera</a> thisCamera;</div>
@@ -119,6 +119,8 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif //MCS_DEV_CAMERACONTROLLER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasscameracontroller_html_afdfacb0fff4f268fffd47dfeb2b6ba70"><div class="ttname"><a href="classcameracontroller.html#afdfacb0fff4f268fffd47dfeb2b6ba70">cameracontroller::createcontrollerRTSPserver</a></div><div class="ttdeci">void createcontrollerRTSPserver()</div><div class="ttdef"><b>Definition:</b> cameracontroller.cpp:95</div></div>
+<div class="ttc" id="aclasscameracontroller_html_ab34984cd7661072c17b0c665261a1a3f"><div class="ttname"><a href="classcameracontroller.html#ab34984cd7661072c17b0c665261a1a3f">cameracontroller::startclientstreams</a></div><div class="ttdeci">void startclientstreams()</div><div class="ttdef"><b>Definition:</b> cameracontroller.cpp:151</div></div>
 <div class="ttc" id="astruct_camera_html"><div class="ttname"><a href="struct_camera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> structs.h:23</div></div>
 <div class="ttc" id="aclassrootstream_html"><div class="ttname"><a href="classrootstream.html">rootstream</a></div><div class="ttdef"><b>Definition:</b> rootstream.h:18</div></div>
 <div class="ttc" id="aclasscameracontroller_html_abd42ef82abbd969c13df5f1c022375ee"><div class="ttname"><a href="classcameracontroller.html#abd42ef82abbd969c13df5f1c022375ee">cameracontroller::getcontrollerlaunchstring</a></div><div class="ttdeci">void getcontrollerlaunchstring()</div><div class="ttdef"><b>Definition:</b> cameracontroller.cpp:61</div></div>
@@ -126,7 +128,10 @@ $(function() {
 <div class="ttc" id="aclasscameracontroller_html_a922bb00315f3fe188dc2d3ce47788edf"><div class="ttname"><a href="classcameracontroller.html#a922bb00315f3fe188dc2d3ce47788edf">cameracontroller::getrootframe</a></div><div class="ttdeci">void getrootframe()</div><div class="ttdef"><b>Definition:</b> cameracontroller.cpp:176</div></div>
 <div class="ttc" id="aclasscameracontroller_html"><div class="ttname"><a href="classcameracontroller.html">cameracontroller</a></div><div class="ttdef"><b>Definition:</b> cameracontroller.h:21</div></div>
 <div class="ttc" id="aclassclientstream_html"><div class="ttname"><a href="classclientstream.html">clientstream</a></div><div class="ttdef"><b>Definition:</b> clientstream.h:20</div></div>
+<div class="ttc" id="aclasscameracontroller_html_abec2b9dbd105c4e362a39beb113d69e5"><div class="ttname"><a href="classcameracontroller.html#abec2b9dbd105c4e362a39beb113d69e5">cameracontroller::initclientstreams</a></div><div class="ttdeci">void initclientstreams()</div><div class="ttdef"><b>Definition:</b> cameracontroller.cpp:112</div></div>
+<div class="ttc" id="aclasscameracontroller_html_aa012304f62a970cf623018fd672cd89c"><div class="ttname"><a href="classcameracontroller.html#aa012304f62a970cf623018fd672cd89c">cameracontroller::sendrootframe</a></div><div class="ttdeci">void sendrootframe()</div><div class="ttdef"><b>Definition:</b> cameracontroller.cpp:195</div></div>
 <div class="ttc" id="aclasscameracontroller_html_ae60183a8ea0e3aaadad7eb63260bd9c7"><div class="ttname"><a href="classcameracontroller.html#ae60183a8ea0e3aaadad7eb63260bd9c7">cameracontroller::cameracontroller</a></div><div class="ttdeci">cameracontroller()</div><div class="ttdef"><b>Definition:</b> cameracontroller.cpp:16</div></div>
+<div class="ttc" id="aclasscameracontroller_html_a8b3f3ce689151c089687c5e6e77c053a"><div class="ttname"><a href="classcameracontroller.html#a8b3f3ce689151c089687c5e6e77c053a">cameracontroller::createcontrollerserver</a></div><div class="ttdeci">void createcontrollerserver()</div><div class="ttdef"><b>Definition:</b> cameracontroller.cpp:81</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

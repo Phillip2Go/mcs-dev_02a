@@ -13,7 +13,7 @@ using namespace tinyxml2;
 /**
  * TinyXML-2 API to read and convert XML file.
  *
- * @def call to get the text as string of a element.
+ * @param call to get the text as string of a element.
  *
  * @param reads 'value' from given XML file
  * @return 'value' from given XML file
@@ -45,8 +45,8 @@ server::server() {}; // Default constructor
 /**
  * Server class starts with constructor.
  *
- * @def load XML file with TinyXML-2 API
- * @def starts all cameras with 'initcameras'
+ * @param load XML file with TinyXML-2 API
+ * @param starts all cameras with 'initcameras'
  */
 server::server(const char *xml_filename) {
     std::cout << "MCS 2.0 by Phillip Mai & Dorian Paeth.\n" << std::endl;
@@ -152,8 +152,8 @@ void server::parsexmldata() {
 /**
  * Server initialize all defined cameras from XML file parse to object in camera controller array.
  *
- * @def Initialize camera with gstreamer library.
- * @def Initialize camera with OpenCV commented out.
+ * @param Initialize camera with gstreamer library.
+ * @param Initialize camera with OpenCV commented out.
  *
  * @param 'thisCameracontrollers' is an array that stores cameras defined in the XML file
  * @param initialize a threadable 'controllerThread' object
@@ -161,7 +161,7 @@ void server::parsexmldata() {
  * @param 'getrootframeThread' opens a Thread to get the root frames
  * @param 'sendrootframeThread' opens a Thread to send root frames
  *
- * @def Start all cameras.
+ * @param Start all cameras.
  */
 void server::initcameras() {
     for (int i = 0; i < this->camcounter; i++) {
@@ -182,14 +182,14 @@ void server::initcameras() {
 /**
  * Server starts all defined cameras added to client stream thread array, with a join to a thread.
  *
- * @def Start camera with gstreamer library.
- * @def Start camera with OpenCV commented out.
+ * @param Start camera with gstreamer library.
+ * @param Start camera with OpenCV commented out.
  *
  * @param 'initclientstreamsThread' join the defined Thread object to a Thread, to start the cameras
  * @param start 'getrootframeThread' to get all the root frames over OpenCV API
  * @param send 'sendrootframeThread' to send all root frames over OpenCV API
  *
- * @def Start/Join all cameras.
+ * @param Start/Join all cameras.
  */
 void server::startcameras() {
     for (int i = 0; i < this->camcounter; i++) {

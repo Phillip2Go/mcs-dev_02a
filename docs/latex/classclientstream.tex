@@ -5,19 +5,15 @@
 \item 
 \mbox{\hyperlink{classclientstream_aa17aedb3c30928ee5218ead884039451}{clientstream}} ()
 \item 
-\mbox{\Hypertarget{classclientstream_af71db8a3357c8e5815c2039dc4fc5e03}\label{classclientstream_af71db8a3357c8e5815c2039dc4fc5e03}} 
-{\bfseries clientstream} (\mbox{\hyperlink{struct_stream}{Stream}} \mbox{\hyperlink{classclientstream}{clientstream}}, std\+::string rootstreampath, std\+::string serverip, Gst\+R\+T\+S\+P\+Media\+Factory $\ast$controllerfactory)
+\mbox{\hyperlink{classclientstream_af71db8a3357c8e5815c2039dc4fc5e03}{clientstream}} (\mbox{\hyperlink{struct_stream}{Stream}} \mbox{\hyperlink{classclientstream}{clientstream}}, std\+::string rootstreampath, std\+::string serverip, Gst\+R\+T\+S\+P\+Media\+Factory $\ast$controllerfactory)
 \item 
 void \mbox{\hyperlink{classclientstream_aa07d5e3c7c365cd598dc9f6f26f484e5}{getlaunchstring}} ()
 \item 
-\mbox{\Hypertarget{classclientstream_a72dd120cf839ade6e18492857178b3e8}\label{classclientstream_a72dd120cf839ade6e18492857178b3e8}} 
-void {\bfseries createstream} ()
+void \mbox{\hyperlink{classclientstream_a72dd120cf839ade6e18492857178b3e8}{createstream}} ()
 \item 
-\mbox{\Hypertarget{classclientstream_a9111aaed05187b64358bb550d1673604}\label{classclientstream_a9111aaed05187b64358bb550d1673604}} 
-void {\bfseries create\+R\+T\+S\+Pserver} ()
+void \mbox{\hyperlink{classclientstream_a9111aaed05187b64358bb550d1673604}{create\+R\+T\+S\+Pserver}} ()
 \item 
-\mbox{\Hypertarget{classclientstream_ae5025729757f70da9401ec2dcb46d6d5}\label{classclientstream_ae5025729757f70da9401ec2dcb46d6d5}} 
-void {\bfseries startstreamserver} ()
+void \mbox{\hyperlink{classclientstream_ae5025729757f70da9401ec2dcb46d6d5}{startstreamserver}} ()
 \item 
 void \mbox{\hyperlink{classclientstream_ad776397aa0146ce06d63861e9e537443}{startsendframes}} ()
 \item 
@@ -29,15 +25,80 @@ std\+::string \mbox{\hyperlink{classclientstream_a91ae5840ff7c33d0fcef3fdae36d3b
 \mbox{\Hypertarget{classclientstream_aa17aedb3c30928ee5218ead884039451}\label{classclientstream_aa17aedb3c30928ee5218ead884039451}} 
 \index{clientstream@{clientstream}!clientstream@{clientstream}}
 \index{clientstream@{clientstream}!clientstream@{clientstream}}
-\doxysubsubsection{\texorpdfstring{clientstream()}{clientstream()}}
+\doxysubsubsection{\texorpdfstring{clientstream()}{clientstream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily clientstream\+::clientstream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Clientstream class.
 
-Creates a stream, that a client device can receive. Reads the root frame from the camera, converts it and sends it to the client device. 
+Creates a stream, that a client device can receive. Reads the root frame from the camera, converts it and sends it to the client device. \mbox{\Hypertarget{classclientstream_af71db8a3357c8e5815c2039dc4fc5e03}\label{classclientstream_af71db8a3357c8e5815c2039dc4fc5e03}} 
+\index{clientstream@{clientstream}!clientstream@{clientstream}}
+\index{clientstream@{clientstream}!clientstream@{clientstream}}
+\doxysubsubsection{\texorpdfstring{clientstream()}{clientstream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily clientstream\+::clientstream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stream}{Stream}}}]{clientstream,  }\item[{std\+::string}]{rootstreampath,  }\item[{std\+::string}]{serverip,  }\item[{Gst\+R\+T\+S\+P\+Media\+Factory $\ast$}]{controllerfactory }\end{DoxyParamCaption})}
+
+Clientstream class starts with constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em get} & \textquotesingle{}this\+Clientstream\textquotesingle{} from constructor \\
+\hline
+{\em get} & \textquotesingle{}rootstreampath\textquotesingle{} from constructor \\
+\hline
+{\em get} & \textquotesingle{}serverip\textquotesingle{} from constructor \\
+\hline
+{\em get} & Gst\+R\+T\+S\+P\+Media\+Factory \textquotesingle{}factory\textquotesingle{} from constructor \\
+\hline
+{\em create} & client stream with given settings \\
+\hline
+\end{DoxyParams}
+
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classclientstream_a91ae5840ff7c33d0fcef3fdae36d3b4e}\label{classclientstream_a91ae5840ff7c33d0fcef3fdae36d3b4e}} 
+\mbox{\Hypertarget{classclientstream_a9111aaed05187b64358bb550d1673604}\label{classclientstream_a9111aaed05187b64358bb550d1673604}} 
+\index{clientstream@{clientstream}!createRTSPserver@{createRTSPserver}}
+\index{createRTSPserver@{createRTSPserver}!clientstream@{clientstream}}
+\doxysubsubsection{\texorpdfstring{createRTSPserver()}{createRTSPserver()}}
+{\footnotesize\ttfamily void clientstream\+::create\+R\+T\+S\+Pserver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clientstream creates the client R\+T\+SP server with help of gstreamer library.
+
+Unused functions from gstreamer library commented out.
+
+
+\begin{DoxyParams}{Parameters}
+{\em create} & a new gstreamer rtsp server in \textquotesingle{}server\textquotesingle{} \\
+\hline
+{\em set} & server address with \textquotesingle{}gst\+\_\+rtsp\+\_\+server\+\_\+set\+\_\+address\textquotesingle{} \\
+\hline
+{\em set} & server port with \textquotesingle{}gst\+\_\+rtsp\+\_\+server\+\_\+set\+\_\+service\textquotesingle{} \\
+\hline
+{\em store} & server mount points in \textquotesingle{}mounts\textquotesingle{} \\
+\hline
+{\em add} & this \textquotesingle{}factory\textquotesingle{} to gstreamer mount points with \textquotesingle{}gst\+\_\+rtsp\+\_\+mount\+\_\+points\+\_\+add\+\_\+factory\textquotesingle{} \\
+\hline
+{\em create} & main loop from gstreamer \\
+\hline
+{\em attache} & \textquotesingle{}server\textquotesingle{} to \textquotesingle{}gst\+\_\+rtsp\+\_\+server\+\_\+attach\textquotesingle{} \\
+\hline
+{\em set} & the \textquotesingle{}create\+R\+T\+S\+Pserverstatus\textquotesingle{} to \textquotesingle{}true\textquotesingle{} after all build up \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classclientstream_a72dd120cf839ade6e18492857178b3e8}\label{classclientstream_a72dd120cf839ade6e18492857178b3e8}} 
+\index{clientstream@{clientstream}!createstream@{createstream}}
+\index{createstream@{createstream}!clientstream@{clientstream}}
+\doxysubsubsection{\texorpdfstring{createstream()}{createstream()}}
+{\footnotesize\ttfamily void clientstream\+::createstream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clientstream creates the client server with help of gstreamer library.
+
+
+\begin{DoxyParams}{Parameters}
+{\em call} & to get the launch string for the server \\
+\hline
+{\em create} & the R\+T\+SP server with help of gstreamer library\\
+\hline
+\end{DoxyParams}
+N\+DI not implemented yet \mbox{\Hypertarget{classclientstream_a91ae5840ff7c33d0fcef3fdae36d3b4e}\label{classclientstream_a91ae5840ff7c33d0fcef3fdae36d3b4e}} 
 \index{clientstream@{clientstream}!getclientstreamprotocol@{getclientstreamprotocol}}
 \index{getclientstreamprotocol@{getclientstreamprotocol}!clientstream@{clientstream}}
 \doxysubsubsection{\texorpdfstring{getclientstreamprotocol()}{getclientstreamprotocol()}}
@@ -75,7 +136,22 @@ Clientstream creates and retrieves the controller launch string for gstreamer li
 
 Clientstream send frames over Open\+CV A\+PI.
 
-Not implemented yet. 
+Not implemented yet. \mbox{\Hypertarget{classclientstream_ae5025729757f70da9401ec2dcb46d6d5}\label{classclientstream_ae5025729757f70da9401ec2dcb46d6d5}} 
+\index{clientstream@{clientstream}!startstreamserver@{startstreamserver}}
+\index{startstreamserver@{startstreamserver}!clientstream@{clientstream}}
+\doxysubsubsection{\texorpdfstring{startstreamserver()}{startstreamserver()}}
+{\footnotesize\ttfamily void clientstream\+::startstreamserver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clientstream creates the root main loop from the gstreamer library.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wait} & till everything build up -\/$>$ threading problem \\
+\hline
+{\em create} & \textquotesingle{}g\+\_\+main\+\_\+loop\+\_\+run\textquotesingle{} with \textquotesingle{}loop\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+N\+DI not implemented yet 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

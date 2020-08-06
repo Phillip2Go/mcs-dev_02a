@@ -75,8 +75,8 @@ void cameracontroller::getcontrollerlaunchstring() {
 /**
  * Cameracontroller creates the controller server with help of gstreamer library.
  *
- * @def call to get the launch string for the server
- * @def create the RTSP server with help of gstreamer library
+ * @param call to get the launch string for the server
+ * @param create the RTSP server with help of gstreamer library
  */
 void cameracontroller::createcontrollerserver() {
     this->getcontrollerlaunchstring();
@@ -86,11 +86,11 @@ void cameracontroller::createcontrollerserver() {
 /**
  * Cameracontroller creates the controller RTSP server with help of gstreamer library.
  *
- * @def 'controllerfactory' instantiates an new gstreamer rtsp media factory object
- * @def 'gst_rtsp_media_factory_set_launch' launches the rtsp media factory
+ * @param 'controllerfactory' instantiates an new gstreamer rtsp media factory object
+ * @param 'gst_rtsp_media_factory_set_launch' launches the rtsp media factory
  * @param 'controllerfactory' is the mew instantiated object
  * @param 'controllersrc' is the launch string
- * @def 'gst_rtsp_media_factory_set_shared' sets the options to multiple clients
+ * @param 'gst_rtsp_media_factory_set_shared' sets the options to multiple clients
  */
 void cameracontroller::createcontrollerRTSPserver() {
     this->controllerfactory = gst_rtsp_media_factory_new();
@@ -106,8 +106,8 @@ void cameracontroller::createcontrollerRTSPserver() {
  * Initialize all clientstreams defined in XML.
  * Add instanced thread object from client stream array to thread array.
  *
- * @def wait till all streams initialized, then set 'initclientstreamsStatus' to 'true'
- * @def start all client streams with 'startclientstreams'
+ * @param wait till all streams initialized, then set 'initclientstreamsStatus' to 'true'
+ * @param start all client streams with 'startclientstreams'
  */
 void cameracontroller::initclientstreams() {
     if (!this->rootstreampath.compare("") == 0) {
@@ -145,8 +145,8 @@ void cameracontroller::initclientstreams() {
  * Initialize all clientstreams defined in XML.
  * Add instanced thread object from client stream array to thread array.
  *
- * @def wait till all streams initialized, then set 'initclientstreamsStatus' to 'true'
- * @def start all client streams with 'startclientstreams'
+ * @param wait till all streams initialized, then set 'initclientstreamsStatus' to 'true'
+ * @param start all client streams with 'startclientstreams'
  */
 void cameracontroller::startclientstreams() {
     if (!this->rootstreampath.compare("") == 0) {
@@ -186,10 +186,11 @@ void cameracontroller::getrootframe() {
  * OpenCV functions commented out.
  * This function not in use right now.
  *
- * @def initialize all client streams and wait till all finished -> threading problem
- * @def check streaming protocol from url
- * @if 'rtsp' start send rootframe to client streams. -> The 'rootframe' only exist once (Singleton)
- * @if 'ndi' not implemented
+ * @param initialize all client streams and wait till all finished -> threading problem
+ * @param check streaming protocol from url
+ *
+ * @param 'rtsp' start send rootframe to client streams. -> The 'rootframe' only exist once (Singleton)
+ * @param 'ndi' not implemented
  */
 void cameracontroller::sendrootframe() {
     // Waiting till all streams init. -> Threading problem.

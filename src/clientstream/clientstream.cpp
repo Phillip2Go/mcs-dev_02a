@@ -22,7 +22,7 @@ clientstream::clientstream() {}; // Default constructor
  * @param get 'rootstreampath' from constructor
  * @param get 'serverip' from constructor
  * @param get GstRTSPMediaFactory 'factory' from constructor
- * @def create client stream with given settings
+ * @param create client stream with given settings
  */
 clientstream::clientstream(Stream clientstream, std::string rootstreampath, std::string serverip, GstRTSPMediaFactory  *controllerfactory) {
     this->thisClientstream = clientstream;
@@ -59,9 +59,10 @@ void clientstream::getlaunchstring() {
 /**
  * Clientstream creates the client server with help of gstreamer library.
  *
- * @def call to get the launch string for the server
- * @def create the RTSP server with help of gstreamer library
- * @if NDI not implemented yet
+ * @param call to get the launch string for the server
+ * @param create the RTSP server with help of gstreamer library
+ *
+ * NDI not implemented yet
  */
 void clientstream::createstream() {
     if (this->thisClientstream.streamprotocol.compare("rtsp") == 0) {
@@ -80,12 +81,12 @@ void clientstream::createstream() {
  * Unused functions from gstreamer library commented out.
  *
  * @param create a new gstreamer rtsp server in 'server'
- * @def set server address with 'gst_rtsp_server_set_address'
- * @def set server port with 'gst_rtsp_server_set_service'
+ * @param set server address with 'gst_rtsp_server_set_address'
+ * @param set server port with 'gst_rtsp_server_set_service'
  * @param store server mount points in 'mounts'
- * @def add this 'factory' to gstreamer mount points with 'gst_rtsp_mount_points_add_factory'
- * @def create main loop from gstreamer
- * @def attache 'server' to 'gst_rtsp_server_attach'
+ * @param add this 'factory' to gstreamer mount points with 'gst_rtsp_mount_points_add_factory'
+ * @param create main loop from gstreamer
+ * @param attache 'server' to 'gst_rtsp_server_attach'
  * @param set the 'createRTSPserverstatus' to 'true' after all build up
  */
 void clientstream::createRTSPserver() {
@@ -119,9 +120,10 @@ void clientstream::createRTSPserver() {
 /**
  * Clientstream creates the root main loop from the gstreamer library.
  *
- * @def wait till everything build up -> threading problem
- * @def create 'g_main_loop_run' with 'loop'
- * @if NDI not implemented yet
+ * @param wait till everything build up -> threading problem
+ * @param create 'g_main_loop_run' with 'loop'
+ *
+ * NDI not implemented yet
  */
 void clientstream::startstreamserver() {
     if (this->thisClientstream.streamprotocol.compare("rtsp") == 0) {

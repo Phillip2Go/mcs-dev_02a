@@ -22,7 +22,7 @@ rootstream::rootstream() {}; // Default constructor
  * @param get 'rootstreampath' from constructor
  * @param get 'camip' from constructor
  * @param get 'rootfactory' from constructor
- * @def create root stream with given settings
+ * @param create root stream with given settings
  */
 rootstream::rootstream(std::string rootstreampath, std::string camip, GstRTSPMediaFactory  *controllerfactory) {
     this->rootstreampath = rootstreampath;
@@ -61,8 +61,8 @@ void rootstream::getrootlaunchstring() {
 /**
  * Rootstream creates the controller server with help of gstreamer library.
  *
- * @def call to get the launch string for the server
- * @def create the RTSP server with help of gstreamer library
+ * @param call to get the launch string for the server
+ * @param create the RTSP server with help of gstreamer library
  */
 void rootstream::createrootstream() {
     //this->rootrtspsrc = "( rtspsrc location=rtsp://192.168.0.62:554:554/MediaInput/h264/stream_1 ! rtph264depay ! h264parse ! rtph264pay name=pay0 pt=96 )";
@@ -75,15 +75,15 @@ void rootstream::createrootstream() {
  *
  * Unused functions from gstreamer library commented out.
  *
- * @def 'rootserver' instantiates an new gstreamer rtsp media factory object
- * @def 'rootmounts' gets the rtsp media factory mount points
- * @def generate the launch string for root rtsp server
- * @def 'gst_rtsp_mount_points_add_factory' add a new factory from the gstreamer library
+ * @param 'rootserver' instantiates an new gstreamer rtsp media factory object
+ * @param 'rootmounts' gets the rtsp media factory mount points
+ * @param generate the launch string for root rtsp server
+ * @param 'gst_rtsp_mount_points_add_factory' add a new factory from the gstreamer library
  * @param 'rootmounts' which is defined before
  * @param 'rootstreamurl' which is defined before
  * @param the created 'rootfactory'
- * @def start 'g_main_loop_new' in 'rootloop'
- * @def attache 'rootserver' to 'gst_rtsp_server_attach'
+ * @param start 'g_main_loop_new' in 'rootloop'
+ * @param attache 'rootserver' to 'gst_rtsp_server_attach'
  * @param set the 'rootcreateRTSPserverstatus' to 'true' after all build up
  */
 void rootstream::createrootRTSPserver() {
@@ -118,8 +118,8 @@ void rootstream::createrootRTSPserver() {
 /**
  * Rootstream creates the root main loop from the gstreamer library.
  *
- * @def wait till everything build up -> threading problem
- * @def create 'g_main_loop_run' with 'rootloop'
+ * @param wait till everything build up -> threading problem
+ * @param create 'g_main_loop_run' with 'rootloop'
  */
 void rootstream::startrootstreamserver() {
     // Threading problem

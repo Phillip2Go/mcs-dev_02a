@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['parsexmldata_10',['parsexmldata',['../classserver.html#a05b87f8d29b1c1d48e85f13e843001d1',1,'server']]]
+  ['initcameras_16',['initcameras',['../classserver.html#aef5ed6e30123b6f2f752ff6ff5f4c00f',1,'server']]],
+  ['initclientstreams_17',['initclientstreams',['../classcameracontroller.html#abec2b9dbd105c4e362a39beb113d69e5',1,'cameracontroller']]]
 ];
