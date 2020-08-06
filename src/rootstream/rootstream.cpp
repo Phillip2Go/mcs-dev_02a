@@ -4,9 +4,26 @@
 
 #include "rootstream.h"
 
-
+/**
+ * Rootstream class.
+ *
+ * Creates an root stream with help of OpenCV API.
+ * Reads the root frame from the camera.
+ * This root frame only exist once in this project.
+ * The root frame is a Singleton.
+ * The server internally multiplies the frames by the specified settings.
+ *
+ */
 rootstream::rootstream() {}; // Default constructor
 
+/**
+ * Rootstream class starts with constructor.
+ *
+ * @param get 'rootstreampath' from constructor
+ * @param get 'camip' from constructor
+ * @param get 'rootfactory' from constructor
+ * @def create root stream with given settings
+ */
 rootstream::rootstream(std::string rootstreampath, std::string camip, GstRTSPMediaFactory  *controllerfactory) {
     this->rootstreampath = rootstreampath;
     this->camip = camip;
@@ -17,6 +34,16 @@ rootstream::rootstream(std::string rootstreampath, std::string camip, GstRTSPMed
     //this->initstream();
 }
 
+/**
+ * Rootstream creates and retrieves
+ * the controller launch string for gstreamer library.
+ *
+ * @param 'launchstart' is the beginning of the launch string
+ * @param 'launchsettings' are the settings for launching the gstreamer RTSP server
+ * @param 'rootstreampath' is copied from scr_array
+ * @param 'rootlaunchstring' is copied from 'rootlaunchstring'.
+ *         This string launches the gstreamer RTSP server from the gstreamer library
+ */
 void rootstream::getrootlaunchstring() {
     gchar *launchsstart = "( rtspsrc location=";
     gchar *launchsettings = " latency=0 ! rtph264depay ! h264parse ! rtph264pay name=pay0 pt=96 )";
@@ -31,12 +58,34 @@ void rootstream::getrootlaunchstring() {
     this->rootrtspsrc = rootlaunchstring.c_str();
 }
 
+/**
+ * Rootstream creates the controller server with help of gstreamer library.
+ *
+ * @def call to get the launch string for the server
+ * @def create the RTSP server with help of gstreamer library
+ */
 void rootstream::createrootstream() {
     //this->rootrtspsrc = "( rtspsrc location=rtsp://192.168.0.62:554:554/MediaInput/h264/stream_1 ! rtph264depay ! h264parse ! rtph264pay name=pay0 pt=96 )";
     this->getrootlaunchstring();
     this->createrootRTSPserver();
 }
 
+/**
+ * Rootstream creates the controller RTSP server with help of gstreamer library.
+ *
+ * Unused functions from gstreamer library commented out.
+ *
+ * @def 'rootserver' instantiates an new gstreamer rtsp media factory object
+ * @def 'rootmounts' gets the rtsp media factory mount points
+ * @def generate the launch string for root rtsp server
+ * @def 'gst_rtsp_mount_points_add_factory' add a new factory from the gstreamer library
+ * @param 'rootmounts' which is defined before
+ * @param 'rootstreamurl' which is defined before
+ * @param the created 'rootfactory'
+ * @def start 'g_main_loop_new' in 'rootloop'
+ * @def attache 'rootserver' to 'gst_rtsp_server_attach'
+ * @param set the 'rootcreateRTSPserverstatus' to 'true' after all build up
+ */
 void rootstream::createrootRTSPserver() {
     this->rootserver = gst_rtsp_server_new ();
 
@@ -66,6 +115,12 @@ void rootstream::createrootRTSPserver() {
     this->rootcreateRTSPserverstatus = true;
 }
 
+/**
+ * Rootstream creates the root main loop from the gstreamer library.
+ *
+ * @def wait till everything build up -> threading problem
+ * @def create 'g_main_loop_run' with 'rootloop'
+ */
 void rootstream::startrootstreamserver() {
     // Threading problem
     while (!this->rootcreateRTSPserverstatus) {}
@@ -74,12 +129,19 @@ void rootstream::startrootstreamserver() {
     g_main_loop_run (this->rootloop);
 }
 
+/**
+ * Rootstream check if main loop from gstreamer library is still running
+ *
+ * @return 'true' if the main loop from 'rootloop' is still running
+ */
 bool rootstream::check_g_main_loop_is_running() {
     return g_main_loop_is_running(this->rootloop);
 }
 
-/*
-void rootstream::initstream() {
+/**
+ * - Deprecated -
+ *
+ * void rootstream::initstream() {
     //this->capture = cv::VideoCapture(this->rootstreampath);
     //this->capture = cv::VideoCapture(0);
 
@@ -111,4 +173,4 @@ cv::Mat rootstream::readrootframe() {
 
     return frame;
 }
-*/
+ */

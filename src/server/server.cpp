@@ -10,6 +10,14 @@
 
 using namespace tinyxml2;
 
+/**
+ * TinyXML-2 API to read and convert XML file.
+ *
+ * @def call to get the text as string of a element.
+ *
+ * @param reads 'value' from given XML file
+ * @return 'value' from given XML file
+ */
 static std::string getElementText(tinyxml2::XMLElement *_element);
 static std::string getElementText(tinyxml2::XMLElement *_element) {
     std::string value;
@@ -20,9 +28,26 @@ static std::string getElementText(tinyxml2::XMLElement *_element) {
     return value;
 }
 
-
+/**
+ * Server class.
+ *
+ * Server reads the XML file at start and
+ * creates camera controller classes
+ * with the data in the XML file.
+ * The server creates a camera controller object
+ * for each camera defined in the XML file.
+ *
+ * Server is a Singleton.
+ *
+ */
 server::server() {}; // Default constructor
 
+/**
+ * Server class starts with constructor.
+ *
+ * @def load XML file with TinyXML-2 API
+ * @def starts all cameras with 'initcameras'
+ */
 server::server(const char *xml_filename) {
     std::cout << "MCS 2.0 by Phillip Mai & Dorian Paeth.\n" << std::endl;
     std::cout << "Start server initialization." << std::endl;
@@ -33,6 +58,19 @@ server::server(const char *xml_filename) {
     this->initcameras();
 }
 
+/**
+ * Server parse data from XML file to camera class objects.
+ *
+ * The TinyXML-2 parser tuns through every line
+ * and takes the DEFINED (look up the XML) data
+ * to create camera class object. The parser
+ * uses the defined function 'getElementText'.
+ *
+ * @param number of cameras will be stored in 'camcounter', max number is 9 (0-9 = 10)
+ * @return break if 'camcounter' > 9
+ * @param camera has a 'streamcounter' who is the 'camcounter' in this function
+ * @param saves the cameras in a 'cameras' array of the server class
+ */
 void server::parsexmldata() {
     this->camcounter = 0;
     tinyxml2::XMLElement *pRoot = this->xml_file.FirstChildElement("configXML")->FirstChildElement("camera");
@@ -111,6 +149,20 @@ void server::parsexmldata() {
     std::cout << "Finished XML to camera parse.\n" << std::endl;
 }
 
+/**
+ * Server initialize all defined cameras from XML file parse to object in camera controller array.
+ *
+ * @def Initialize camera with gstreamer library.
+ * @def Initialize camera with OpenCV commented out.
+ *
+ * @param 'thisCameracontrollers' is an array that stores cameras defined in the XML file
+ * @param initialize a threadable 'controllerThread' object
+ * @param stores the threadable objects in a 'initclientstreamsThread' array
+ * @param 'getrootframeThread' opens a Thread to get the root frames
+ * @param 'sendrootframeThread' opens a Thread to send root frames
+ *
+ * @def Start all cameras.
+ */
 void server::initcameras() {
     for (int i = 0; i < this->camcounter; i++) {
         this->thisCameracontrollers[i] = cameracontroller(this->cameras[i]);
@@ -127,6 +179,18 @@ void server::initcameras() {
     this->startcameras();
 }
 
+/**
+ * Server starts all defined cameras added to client stream thread array, with a join to a thread.
+ *
+ * @def Start camera with gstreamer library.
+ * @def Start camera with OpenCV commented out.
+ *
+ * @param 'initclientstreamsThread' join the defined Thread object to a Thread, to start the cameras
+ * @param start 'getrootframeThread' to get all the root frames over OpenCV API
+ * @param send 'sendrootframeThread' to send all root frames over OpenCV API
+ *
+ * @def Start/Join all cameras.
+ */
 void server::startcameras() {
     for (int i = 0; i < this->camcounter; i++) {
 

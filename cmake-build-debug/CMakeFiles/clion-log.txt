@@ -1,7 +1,34 @@
-"/Users/phillipmai/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "CodeBlocks - Unix Makefiles" /Users/phillipmai/CLionProjects/mcs-dev-02a
+"/Users/phillipmai/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.6397.106/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/phillipmai/Library/Mobile Documents/com~apple~CloudDocs/Workspaces/CLionProjects/mcs-dev02a_docu"
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
 -- Building Debug ERTSP
-CMAKE_C_FLAGS: -I/usr/local/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include -I/usr/local/Cellar/gstreamer/1.16.2/include/gstreamer-1.0 -I/usr/local/Cellar/glib/2.64.1/include -I/usr/local/Cellar/glib/2.64.1/include/glib-2.0 -I/usr/local/Cellar/glib/2.64.1/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/pcre/8.44/include
-CMAKE_EXE_LINK_FLAGS: -L/usr/local/Cellar/gstreamer/1.16.2/lib -L/usr/local/Cellar/glib/2.64.1/lib -L/usr/local/opt/gettext/lib -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/phillipmai/CLionProjects/mcs-dev-02a/cmake-build-debug
+-- Checking for one of the modules 'gstreamer-1.0'
+CMake Error at /Users/phillipmai/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.6397.106/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/FindPkgConfig.cmake:745 (message):
+  None of the required 'gstreamer-1.0' found
+Call Stack (most recent call first):
+  CMakeLists.txt:52 (pkg_search_module)
+
+
+-- Checking for one of the modules 'gstreamer-app-1.0'
+CMake Error at /Users/phillipmai/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.6397.106/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/FindPkgConfig.cmake:745 (message):
+  None of the required 'gstreamer-app-1.0' found
+Call Stack (most recent call first):
+  CMakeLists.txt:56 (pkg_search_module)
+
+
+CMake Error at CMakeLists.txt:58 (include_directories):
+  include_directories given empty-string as include directory.
+
+
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+CMake Error at CMakeLists.txt:95 (string):
+  string sub-command REPLACE requires at least four arguments.
+
+
+CMAKE_C_FLAGS: 
+CMake Error at CMakeLists.txt:100 (string):
+  string sub-command REPLACE requires at least four arguments.
+
+
+CMAKE_EXE_LINK_FLAGS: 
+-- Configuring incomplete, errors occurred!
+See also "/Users/phillipmai/Library/Mobile Documents/com~apple~CloudDocs/Workspaces/CLionProjects/mcs-dev02a_docu/cmake-build-debug/CMakeFiles/CMakeOutput.log".
