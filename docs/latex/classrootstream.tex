@@ -1,0 +1,73 @@
+\hypertarget{classrootstream}{}\doxysection{rootstream Class Reference}
+\label{classrootstream}\index{rootstream@{rootstream}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrootstream_a655abf41f787329f272176a44fd51493}{rootstream}} ()
+\item 
+\mbox{\Hypertarget{classrootstream_a7cbb22e4f5c7b1fbc3e90567d20042b2}\label{classrootstream_a7cbb22e4f5c7b1fbc3e90567d20042b2}} 
+{\bfseries rootstream} (std\+::string rootstreampath, std\+::string camip, Gst\+R\+T\+S\+P\+Media\+Factory $\ast$controllerfactory)
+\item 
+void \mbox{\hyperlink{classrootstream_a1a92c417dcbd9fcfb13c60c5c811fd2d}{getrootlaunchstring}} ()
+\item 
+\mbox{\Hypertarget{classrootstream_a4fca8203071c90c4f5cac3402fe3223e}\label{classrootstream_a4fca8203071c90c4f5cac3402fe3223e}} 
+void {\bfseries createrootstream} ()
+\item 
+\mbox{\Hypertarget{classrootstream_ab0f688e1b1e75f3d5237d761abf6c2e3}\label{classrootstream_ab0f688e1b1e75f3d5237d761abf6c2e3}} 
+void {\bfseries createroot\+R\+T\+S\+Pserver} ()
+\item 
+\mbox{\Hypertarget{classrootstream_a9e982af9b515f51a2d78f6a8a8c40222}\label{classrootstream_a9e982af9b515f51a2d78f6a8a8c40222}} 
+void {\bfseries startrootstreamserver} ()
+\item 
+bool \mbox{\hyperlink{classrootstream_ace474a19552e74552587df4c685765e3}{check\+\_\+g\+\_\+main\+\_\+loop\+\_\+is\+\_\+running}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrootstream_a655abf41f787329f272176a44fd51493}\label{classrootstream_a655abf41f787329f272176a44fd51493}} 
+\index{rootstream@{rootstream}!rootstream@{rootstream}}
+\index{rootstream@{rootstream}!rootstream@{rootstream}}
+\doxysubsubsection{\texorpdfstring{rootstream()}{rootstream()}}
+{\footnotesize\ttfamily rootstream\+::rootstream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Rootstream class.
+
+Creates an root stream with help of Open\+CV A\+PI. Reads the root frame from the camera. This root frame only exist once in this project. The root frame is a Singleton. The server internally multiplies the frames by the specified settings. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrootstream_ace474a19552e74552587df4c685765e3}\label{classrootstream_ace474a19552e74552587df4c685765e3}} 
+\index{rootstream@{rootstream}!check\_g\_main\_loop\_is\_running@{check\_g\_main\_loop\_is\_running}}
+\index{check\_g\_main\_loop\_is\_running@{check\_g\_main\_loop\_is\_running}!rootstream@{rootstream}}
+\doxysubsubsection{\texorpdfstring{check\_g\_main\_loop\_is\_running()}{check\_g\_main\_loop\_is\_running()}}
+{\footnotesize\ttfamily bool rootstream\+::check\+\_\+g\+\_\+main\+\_\+loop\+\_\+is\+\_\+running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Rootstream check if main loop from gstreamer library is still running
+
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}true\textquotesingle{} if the main loop from \textquotesingle{}rootloop\textquotesingle{} is still running 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrootstream_a1a92c417dcbd9fcfb13c60c5c811fd2d}\label{classrootstream_a1a92c417dcbd9fcfb13c60c5c811fd2d}} 
+\index{rootstream@{rootstream}!getrootlaunchstring@{getrootlaunchstring}}
+\index{getrootlaunchstring@{getrootlaunchstring}!rootstream@{rootstream}}
+\doxysubsubsection{\texorpdfstring{getrootlaunchstring()}{getrootlaunchstring()}}
+{\footnotesize\ttfamily void rootstream\+::getrootlaunchstring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Rootstream creates and retrieves the controller launch string for gstreamer library.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}launchstart\textquotesingle{}} & is the beginning of the launch string \\
+\hline
+{\em \textquotesingle{}launchsettings\textquotesingle{}} & are the settings for launching the gstreamer R\+T\+SP server \\
+\hline
+{\em \textquotesingle{}rootstreampath\textquotesingle{}} & is copied from scr\+\_\+array \\
+\hline
+{\em \textquotesingle{}rootlaunchstring\textquotesingle{}} & is copied from \textquotesingle{}rootlaunchstring\textquotesingle{}. This string launches the gstreamer R\+T\+SP server from the gstreamer library \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rootstream.\+h\item 
+rootstream.\+cpp\end{DoxyCompactItemize}

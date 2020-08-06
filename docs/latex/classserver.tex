@@ -1,0 +1,65 @@
+\hypertarget{classserver}{}\doxysection{server Class Reference}
+\label{classserver}\index{server@{server}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver_a30853862a28dda8c4c9b57b4e8f7de1a}{server}} ()
+\item 
+\mbox{\Hypertarget{classserver_a88b751e95b2efeda3ec3fd396ee8ff2d}\label{classserver_a88b751e95b2efeda3ec3fd396ee8ff2d}} 
+{\bfseries server} (const char $\ast$xml\+\_\+filename)
+\item 
+void \mbox{\hyperlink{classserver_a05b87f8d29b1c1d48e85f13e843001d1}{parsexmldata}} ()
+\item 
+\mbox{\Hypertarget{classserver_aef5ed6e30123b6f2f752ff6ff5f4c00f}\label{classserver_aef5ed6e30123b6f2f752ff6ff5f4c00f}} 
+void {\bfseries initcameras} ()
+\item 
+\mbox{\Hypertarget{classserver_a2b24c5cd7a618cb3d87fcff5d6e0b179}\label{classserver_a2b24c5cd7a618cb3d87fcff5d6e0b179}} 
+void {\bfseries startcameras} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver_a30853862a28dda8c4c9b57b4e8f7de1a}\label{classserver_a30853862a28dda8c4c9b57b4e8f7de1a}} 
+\index{server@{server}!server@{server}}
+\index{server@{server}!server@{server}}
+\doxysubsubsection{\texorpdfstring{server()}{server()}}
+{\footnotesize\ttfamily server\+::server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Server class.
+
+Server reads the X\+ML file at start and creates camera controller classes with the data in the X\+ML file. The server creates a camera controller object for each camera defined in the X\+ML file.
+
+Server is a Singleton. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver_a05b87f8d29b1c1d48e85f13e843001d1}\label{classserver_a05b87f8d29b1c1d48e85f13e843001d1}} 
+\index{server@{server}!parsexmldata@{parsexmldata}}
+\index{parsexmldata@{parsexmldata}!server@{server}}
+\doxysubsubsection{\texorpdfstring{parsexmldata()}{parsexmldata()}}
+{\footnotesize\ttfamily void server\+::parsexmldata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Server parse data from X\+ML file to camera class objects.
+
+The Tiny\+X\+M\+L-\/2 parser tuns through every line and takes the D\+E\+F\+I\+N\+ED (look up the X\+ML) data to create camera class object. The parser uses the defined function \textquotesingle{}get\+Element\+Text\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & of cameras will be stored in \textquotesingle{}camcounter\textquotesingle{}, max number is 9 (0-\/9 = 10) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+break if \textquotesingle{}camcounter\textquotesingle{} $>$ 9 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & has a \textquotesingle{}streamcounter\textquotesingle{} who is the \textquotesingle{}camcounter\textquotesingle{} in this function \\
+\hline
+{\em saves} & the cameras in a \textquotesingle{}cameras\textquotesingle{} array of the server class \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+server.\+h\item 
+server.\+cpp\end{DoxyCompactItemize}

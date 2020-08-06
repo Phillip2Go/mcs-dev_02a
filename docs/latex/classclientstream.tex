@@ -1,0 +1,83 @@
+\hypertarget{classclientstream}{}\doxysection{clientstream Class Reference}
+\label{classclientstream}\index{clientstream@{clientstream}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclientstream_aa17aedb3c30928ee5218ead884039451}{clientstream}} ()
+\item 
+\mbox{\Hypertarget{classclientstream_af71db8a3357c8e5815c2039dc4fc5e03}\label{classclientstream_af71db8a3357c8e5815c2039dc4fc5e03}} 
+{\bfseries clientstream} (\mbox{\hyperlink{struct_stream}{Stream}} \mbox{\hyperlink{classclientstream}{clientstream}}, std\+::string rootstreampath, std\+::string serverip, Gst\+R\+T\+S\+P\+Media\+Factory $\ast$controllerfactory)
+\item 
+void \mbox{\hyperlink{classclientstream_aa07d5e3c7c365cd598dc9f6f26f484e5}{getlaunchstring}} ()
+\item 
+\mbox{\Hypertarget{classclientstream_a72dd120cf839ade6e18492857178b3e8}\label{classclientstream_a72dd120cf839ade6e18492857178b3e8}} 
+void {\bfseries createstream} ()
+\item 
+\mbox{\Hypertarget{classclientstream_a9111aaed05187b64358bb550d1673604}\label{classclientstream_a9111aaed05187b64358bb550d1673604}} 
+void {\bfseries create\+R\+T\+S\+Pserver} ()
+\item 
+\mbox{\Hypertarget{classclientstream_ae5025729757f70da9401ec2dcb46d6d5}\label{classclientstream_ae5025729757f70da9401ec2dcb46d6d5}} 
+void {\bfseries startstreamserver} ()
+\item 
+void \mbox{\hyperlink{classclientstream_ad776397aa0146ce06d63861e9e537443}{startsendframes}} ()
+\item 
+std\+::string \mbox{\hyperlink{classclientstream_a91ae5840ff7c33d0fcef3fdae36d3b4e}{getclientstreamprotocol}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classclientstream_aa17aedb3c30928ee5218ead884039451}\label{classclientstream_aa17aedb3c30928ee5218ead884039451}} 
+\index{clientstream@{clientstream}!clientstream@{clientstream}}
+\index{clientstream@{clientstream}!clientstream@{clientstream}}
+\doxysubsubsection{\texorpdfstring{clientstream()}{clientstream()}}
+{\footnotesize\ttfamily clientstream\+::clientstream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clientstream class.
+
+Creates a stream, that a client device can receive. Reads the root frame from the camera, converts it and sends it to the client device. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classclientstream_a91ae5840ff7c33d0fcef3fdae36d3b4e}\label{classclientstream_a91ae5840ff7c33d0fcef3fdae36d3b4e}} 
+\index{clientstream@{clientstream}!getclientstreamprotocol@{getclientstreamprotocol}}
+\index{getclientstreamprotocol@{getclientstreamprotocol}!clientstream@{clientstream}}
+\doxysubsubsection{\texorpdfstring{getclientstreamprotocol()}{getclientstreamprotocol()}}
+{\footnotesize\ttfamily std\+::string clientstream\+::getclientstreamprotocol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clientstream getter, for the clientstream streaming protocol.
+
+\begin{DoxyReturn}{Returns}
+streaming protocol\+: R\+T\+SP or N\+DI 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classclientstream_aa07d5e3c7c365cd598dc9f6f26f484e5}\label{classclientstream_aa07d5e3c7c365cd598dc9f6f26f484e5}} 
+\index{clientstream@{clientstream}!getlaunchstring@{getlaunchstring}}
+\index{getlaunchstring@{getlaunchstring}!clientstream@{clientstream}}
+\doxysubsubsection{\texorpdfstring{getlaunchstring()}{getlaunchstring()}}
+{\footnotesize\ttfamily void clientstream\+::getlaunchstring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clientstream creates and retrieves the controller launch string for gstreamer library.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}launchstart\textquotesingle{}} & is the beginning of the launch string \\
+\hline
+{\em \textquotesingle{}launchsettings\textquotesingle{}} & are the settings for launching the gstreamer R\+T\+SP server \\
+\hline
+{\em \textquotesingle{}rootstreampath\textquotesingle{}} & is copied from scr\+\_\+array \\
+\hline
+{\em \textquotesingle{}rootlaunchstring\textquotesingle{}} & is copied from \textquotesingle{}rootlaunchstring\textquotesingle{}. This string launches the gstreamer R\+T\+SP server from the gstreamer library \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classclientstream_ad776397aa0146ce06d63861e9e537443}\label{classclientstream_ad776397aa0146ce06d63861e9e537443}} 
+\index{clientstream@{clientstream}!startsendframes@{startsendframes}}
+\index{startsendframes@{startsendframes}!clientstream@{clientstream}}
+\doxysubsubsection{\texorpdfstring{startsendframes()}{startsendframes()}}
+{\footnotesize\ttfamily void clientstream\+::startsendframes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clientstream send frames over Open\+CV A\+PI.
+
+Not implemented yet. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+clientstream.\+h\item 
+clientstream.\+cpp\end{DoxyCompactItemize}

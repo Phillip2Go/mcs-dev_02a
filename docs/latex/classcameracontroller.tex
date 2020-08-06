@@ -1,0 +1,115 @@
+\hypertarget{classcameracontroller}{}\doxysection{cameracontroller Class Reference}
+\label{classcameracontroller}\index{cameracontroller@{cameracontroller}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcameracontroller_ae60183a8ea0e3aaadad7eb63260bd9c7}{cameracontroller}} ()
+\item 
+\mbox{\hyperlink{classcameracontroller_a21cfa78f6bdc4282733997f8d579198b}{cameracontroller}} (\mbox{\hyperlink{struct_camera}{Camera}} camera)
+\item 
+std\+::string \mbox{\hyperlink{classcameracontroller_af88661706716a916beb7568822bbc1b2}{getrootstreampath}} ()
+\item 
+void \mbox{\hyperlink{classcameracontroller_a922bb00315f3fe188dc2d3ce47788edf}{getrootframe}} ()
+\item 
+\mbox{\Hypertarget{classcameracontroller_aa012304f62a970cf623018fd672cd89c}\label{classcameracontroller_aa012304f62a970cf623018fd672cd89c}} 
+void {\bfseries sendrootframe} ()
+\item 
+\mbox{\Hypertarget{classcameracontroller_abec2b9dbd105c4e362a39beb113d69e5}\label{classcameracontroller_abec2b9dbd105c4e362a39beb113d69e5}} 
+void {\bfseries initclientstreams} ()
+\item 
+\mbox{\Hypertarget{classcameracontroller_ab34984cd7661072c17b0c665261a1a3f}\label{classcameracontroller_ab34984cd7661072c17b0c665261a1a3f}} 
+void {\bfseries startclientstreams} ()
+\item 
+void \mbox{\hyperlink{classcameracontroller_abd42ef82abbd969c13df5f1c022375ee}{getcontrollerlaunchstring}} ()
+\item 
+\mbox{\Hypertarget{classcameracontroller_a8b3f3ce689151c089687c5e6e77c053a}\label{classcameracontroller_a8b3f3ce689151c089687c5e6e77c053a}} 
+void {\bfseries createcontrollerserver} ()
+\item 
+\mbox{\Hypertarget{classcameracontroller_afdfacb0fff4f268fffd47dfeb2b6ba70}\label{classcameracontroller_afdfacb0fff4f268fffd47dfeb2b6ba70}} 
+void {\bfseries createcontroller\+R\+T\+S\+Pserver} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcameracontroller_ae60183a8ea0e3aaadad7eb63260bd9c7}\label{classcameracontroller_ae60183a8ea0e3aaadad7eb63260bd9c7}} 
+\index{cameracontroller@{cameracontroller}!cameracontroller@{cameracontroller}}
+\index{cameracontroller@{cameracontroller}!cameracontroller@{cameracontroller}}
+\doxysubsubsection{\texorpdfstring{cameracontroller()}{cameracontroller()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily cameracontroller\+::cameracontroller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cameracontroller class.
+
+Simulates a controller for a camera. Each controller controls and simulates a camera defined in the X\+ML. The client device doesn\textquotesingle{}t communicate directly with the camera, it communicates with this camera class, which opens sockets with which the client device can communicate. \mbox{\Hypertarget{classcameracontroller_a21cfa78f6bdc4282733997f8d579198b}\label{classcameracontroller_a21cfa78f6bdc4282733997f8d579198b}} 
+\index{cameracontroller@{cameracontroller}!cameracontroller@{cameracontroller}}
+\index{cameracontroller@{cameracontroller}!cameracontroller@{cameracontroller}}
+\doxysubsubsection{\texorpdfstring{cameracontroller()}{cameracontroller()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily cameracontroller\+::cameracontroller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera}{Camera}}}]{camera }\end{DoxyParamCaption})}
+
+Cameracontroller constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}this\+Camera\textquotesingle{}} & is the camera who will be controlled \\
+\hline
+{\em \textquotesingle{}rootstreampath\textquotesingle{}} & is the R\+T\+SP U\+RL to the camera that is being controlled/connected\\
+\hline
+\end{DoxyParams}
+Create the server for the controller with \textquotesingle{}createcontrollerserver\textquotesingle{} before the clientserver starts. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcameracontroller_abd42ef82abbd969c13df5f1c022375ee}\label{classcameracontroller_abd42ef82abbd969c13df5f1c022375ee}} 
+\index{cameracontroller@{cameracontroller}!getcontrollerlaunchstring@{getcontrollerlaunchstring}}
+\index{getcontrollerlaunchstring@{getcontrollerlaunchstring}!cameracontroller@{cameracontroller}}
+\doxysubsubsection{\texorpdfstring{getcontrollerlaunchstring()}{getcontrollerlaunchstring()}}
+{\footnotesize\ttfamily void cameracontroller\+::getcontrollerlaunchstring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cameracontroller creates and retrieves the controller launch string for gstreamer library.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}launchstart\textquotesingle{}} & is the beginning of the launch string \\
+\hline
+{\em \textquotesingle{}launchsettings\textquotesingle{}} & are the settings for launching the gstreamer R\+T\+SP server \\
+\hline
+{\em \textquotesingle{}rootstreampath\textquotesingle{}} & is copied from scr\+\_\+array \\
+\hline
+{\em \textquotesingle{}controllersrc\textquotesingle{}} & is copied from \textquotesingle{}controllerlaunchstring\textquotesingle{}. This string launches the gstreamer R\+T\+SP server from the gstreamer library \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcameracontroller_a922bb00315f3fe188dc2d3ce47788edf}\label{classcameracontroller_a922bb00315f3fe188dc2d3ce47788edf}} 
+\index{cameracontroller@{cameracontroller}!getrootframe@{getrootframe}}
+\index{getrootframe@{getrootframe}!cameracontroller@{cameracontroller}}
+\doxysubsubsection{\texorpdfstring{getrootframe()}{getrootframe()}}
+{\footnotesize\ttfamily void cameracontroller\+::getrootframe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cameracontroller retrieves root frame from Open\+CV rtsp socket A\+PI.
+
+Open\+CV functions commented out. This function not in use right now.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}rootframe\textquotesingle{}} & is the frame from the camera. -\/$>$ The \textquotesingle{}rootframe\textquotesingle{} only exist once (Singleton) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcameracontroller_af88661706716a916beb7568822bbc1b2}\label{classcameracontroller_af88661706716a916beb7568822bbc1b2}} 
+\index{cameracontroller@{cameracontroller}!getrootstreampath@{getrootstreampath}}
+\index{getrootstreampath@{getrootstreampath}!cameracontroller@{cameracontroller}}
+\doxysubsubsection{\texorpdfstring{getrootstreampath()}{getrootstreampath()}}
+{\footnotesize\ttfamily std\+::string cameracontroller\+::getrootstreampath (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cameracontroller creates and retrieves the rootstream path.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}this\+Camera.\+protocol\textquotesingle{}} & distinguishes between R\+T\+SP and N\+DI \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\+RL to communicate with camera
+\end{DoxyReturn}
+N\+DI not implemented yet. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cameracontroller.\+h\item 
+cameracontroller.\+cpp\end{DoxyCompactItemize}
